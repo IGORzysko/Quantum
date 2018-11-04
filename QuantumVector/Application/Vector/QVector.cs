@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace QuantumRandomBit.Application.QSharpSimulator.Vector
+namespace QuantumVector.Vector
 {
     public struct QuantumVector
     {
@@ -21,7 +21,7 @@ namespace QuantumRandomBit.Application.QSharpSimulator.Vector
             this.One = new Vector2(0, 1);
 
             this.Result = Vector2.Add(
-                Vector2.Multiply(this.Alpha, this.Zero), 
+                Vector2.Multiply(this.Alpha, this.Zero),
                 Vector2.Multiply(this.Beta, this.One)
             );
         }

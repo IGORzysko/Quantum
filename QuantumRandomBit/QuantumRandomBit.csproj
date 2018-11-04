@@ -45,12 +45,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\CSharp\Driver.cs" />
-    <Compile Include="Application\QSharpSimulator\Vector\QuantumVector.cs" />
     <Compile Include="Interfaces\Application\CSharp\IDriver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\QSharpSimulator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuantumMath\QuantumMath.csproj">
+      <Project>{15b3c655-3c74-43de-b1ae-d5f632d81235}</Project>
+      <Name>QuantumMath</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

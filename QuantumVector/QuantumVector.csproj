@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CE23FCE-B74B-485D-8AE7-8749AB69288B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>QSharp</RootNamespace>
-    <AssemblyName>QSharp</AssemblyName>
+    <ProjectGuid>{AC70D83F-8503-428F-80DF-62101B89FE8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuantumVector</RootNamespace>
+    <AssemblyName>QuantumVector</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,9 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,26 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Application\Vector\QuantumVector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassicRandomBit\ClassicRandomBit.csproj">
-      <Project>{380ca317-fb6b-4fcd-b812-5cd1cd67293a}</Project>
-      <Name>ClassicRandomBit</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\QuantumMath\QuantumMath.csproj">
-      <Project>{15B3C655-3C74-43DE-B1AE-D5F632D81235}</Project>
-      <Name>QuantumMath</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\QuantumRandomBit\QuantumRandomBit.csproj">
-      <Project>{62c1af82-7668-4ac4-a98c-c8c96b54cf1c}</Project>
-      <Name>QuantumRandomBit</Name>
-    </ProjectReference>
+    <Folder Include="Application\Matrix\" />
+    <Folder Include="Application\Operation\" />
+    <Folder Include="Application\Operator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
